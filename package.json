@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/three": "^0.93.4",
+    "camera-controls": "^1.5.1",
+    "d3": "^5.7.0",
+    "d3-geo": "^1.11.1",
+    "mapbox-gl": "^0.50.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "three": "^0.97.0"
   },
   "scripts": {
     "start": "react-scripts start",
