@@ -14,8 +14,8 @@ const Card = (props) => {
             () => {
                 window.cameraControls.rotateTo(3, 1, true);
                 window.cameraControls.dollyTo(300, true);
-                console.log();
                 props.closeBtn.current.style.opacity = 1;
+                window.cameraControls.enabled = false;
             }
         }>
 
@@ -46,7 +46,8 @@ class App extends React.Component {
 
     onCloseBtn = () => {
         this.closeBtn.current.style.opacity = 0;
-        window.cameraControls.reset(true);
+        window.cameraControls.dollyTo(500, true);
+        window.cameraControls.enabled = true;
     };
 
     render() {

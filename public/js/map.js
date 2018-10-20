@@ -25,7 +25,7 @@ document.getElementById('container').appendChild(renderer.domElement);
 // ========================
 // Camera
 // ========================
-const CameraControls = cameraControlsFactory(THREE);
+CameraControls.install( { THREE: THREE } );
 const camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 1, 2000);
 camera.position.z = 500;
 const cameraControls = new CameraControls(camera, document.getElementById('root'));
@@ -37,7 +37,6 @@ cameraControls.dolly = (distance, enableTransition) => {
 };
 cameraControls.rotate(0, -1, true);
 cameraControls.update();
-
 window.cameraControls = cameraControls;
 
 
@@ -93,8 +92,17 @@ scene.add(light);
 // ========================
 let stopRotating = false;
 const wrapper = document.getElementById('root');
-wrapper.ontouchstart = wrapper.onmousedown = () => { stopRotating = true };
-wrapper.ontouchend = wrapper.ontouchcancel = wrapper.onmouseup = () => { stopRotating = false };
+
+wrapper.ontouchstart = wrapper.onmousedown = () => {
+    if (!cameraControls.enabled) return;
+    stopRotating = true
+};
+
+wrapper.ontouchend = wrapper.ontouchcancel = wrapper.onmouseup = () => {
+    if (!cameraControls.enabled) return;
+    stopRotating = false
+};
+
 window.onresize = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
