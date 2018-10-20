@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+#container canvas {
+    vertical-align: top;
+}
+
+#container > div {
+    bottom: 0;
+    top: auto !important;
+}
+
+#root {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
