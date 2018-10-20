@@ -3,22 +3,30 @@ import About from './components/about';
 
 const Card = (props) => {
     return (
-        <div style={{
-            height: 125,
-            width: 200,
-            marginLeft: 25,
-            marginRight: 25,
-            borderRadius: 8,
-            background: 'white'}}
-        onClick={
-            () => {
-                window.cameraControls.rotateTo(3, 1, true);
-                window.cameraControls.dollyTo(300, true);
-                props.closeBtn.current.style.opacity = 1;
-                window.cameraControls.enabled = false;
-            }
-        }>
-
+        <div
+            style={{
+                height: 125,
+                width: 200,
+                marginLeft: 25,
+                marginRight: 25,
+                borderRadius: 8,
+                background: 'white',
+                color: 'black',
+                justifyContent: 'center',
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+            onClick={() => props.showInfo(props.id)}
+        >
+            <img
+                style={{marginTop: 25}}
+                alt="123"
+                src="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                width="32"
+                height="32"
+            />
+            <h2 style={{marginTop: 5}}>{props.title}</h2>
         </div>
     );
 };
@@ -42,12 +50,46 @@ const CardWrapper = (props) => {
 
 class App extends React.Component {
 
+    state = {
+        points: []
+    };
+
     closeBtn = React.createRef();
 
     onCloseBtn = () => {
         this.closeBtn.current.style.opacity = 0;
         window.cameraControls.dollyTo(500, true);
         window.cameraControls.enabled = true;
+    };
+
+    show_info = (id) => {
+        this.state.points.map((point) => {
+            if (point.id === id) {
+                window.helpers.rotateToPoint(point.lat, point.lon);
+                this.closeBtn.current.style.opacity = 1;
+                window.cameraControls.enabled = false;
+            }
+            return true;
+        });
+    };
+
+    componentWillMount = () => {
+        window.react = {};
+        window.react['show_info'] = this.show_info.bind(this);
+
+        fetch('points.json')
+            .then((data) => data.json())
+            .then((data) => {
+                this.setState({points: data.points});
+                data.points.map((point) => {
+                    window.helpers.addPoint({
+                        id: point.id,
+                        lat: point.lat,
+                        lon: point.lon
+                    });
+                    return true;
+                });
+            })
     };
 
     render() {
@@ -76,11 +118,16 @@ class App extends React.Component {
                 </div>
                 <About/>
                 <CardWrapper>
-                    <Card closeBtn={this.closeBtn} />
-                    <Card closeBtn={this.closeBtn} />
-                    <Card closeBtn={this.closeBtn} />
-                    <Card closeBtn={this.closeBtn} />
-                    <Card closeBtn={this.closeBtn} />
+                    {this.state.points.map((point) => {
+                        return <Card
+                            key={point.id}
+                            id={point.id}
+                            title={point.title}
+                            lat={point.lat}
+                            lon={point.lon}
+                            showInfo={this.show_info.bind(this)}
+                        />
+                    })}
                 </CardWrapper>
             </div>
         );
