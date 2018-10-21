@@ -5,17 +5,17 @@ branches:
   - master
 
 node_js:
-  - "stable"
+- "stable"
 
 cache:
   directories:
   - node_modules
 
 script:
-  - npm run build
+- npm run build
 
 before_deploy:
-  - zip dist.zip build
+- zip dist.zip /home/travis/build/hit2hat/warmap/build
 
 deploy:
   provider: releases
