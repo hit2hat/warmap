@@ -19,3 +19,5 @@ deploy:
   api_key: "629ca4b3311aaf44ba0cfecfee3c40c91e782f67"
   file: build/*
   skip_cleanup: true
+  on:
+    tags: true
