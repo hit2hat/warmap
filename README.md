@@ -1,4 +1,4 @@
-# WarMap
+# WarMap [![Build Status](https://travis-ci.com/hit2hat/warmap.svg?token=7KowPMjePUYr8QgiGCH7&branch=master)](https://travis-ci.com/hit2hat/warmap)
 WarMap is a simple kiosk-like application for terminals, 
 that helps your customers with information about 
 a wars of the 20th century.
