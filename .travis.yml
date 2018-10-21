@@ -15,7 +15,7 @@ script:
 - npm run build
 
 before_deploy:
-- zip dist.zip /home/travis/build/hit2hat/warmap/build
+- zip dist.zip /home/travis/build/hit2hat/warmap/build/*
 
 deploy:
   provider: releases
