@@ -1,5 +1,9 @@
 language: node_js
 
+branches:
+  only:
+  - master
+
 node_js:
   - "stable"
 
@@ -8,7 +12,6 @@ cache:
   - node_modules
 
 script:
-  - npm install
   - npm run build
 
 deploy:
@@ -16,5 +19,3 @@ deploy:
   api_key: "629ca4b3311aaf44ba0cfecfee3c40c91e782f67"
   file: build/*
   skip_cleanup: true
-  on:
-    tags: true
