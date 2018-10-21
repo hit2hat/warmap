@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './components/about';
+import Panel from './components/panel';
 
 const Card = (props) => {
     return (
@@ -37,7 +38,7 @@ const CardWrapper = (props) => {
         <div style={{
             position: 'absolute',
             bottom: 0,
-            marginBottom: 25,
+            marginBottom: 15,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
@@ -52,7 +53,8 @@ const CardWrapper = (props) => {
 class App extends React.Component {
 
     state = {
-        points: []
+        points: [],
+        actual_point: {}
     };
 
     closeBtn = React.createRef();
@@ -61,6 +63,7 @@ class App extends React.Component {
         this.closeBtn.current.style.opacity = 0;
         window.cameraControls.dollyTo(500, true);
         window.cameraControls.enabled = true;
+        this.setState({actual_point: {}});
     };
 
     show_info = (id) => {
@@ -69,6 +72,7 @@ class App extends React.Component {
                 window.helpers.rotateToPoint(point.lat, point.lon);
                 this.closeBtn.current.style.opacity = 1;
                 window.cameraControls.enabled = false;
+                this.setState({actual_point: point});
             }
             return true;
         });
@@ -104,7 +108,7 @@ class App extends React.Component {
                         height: 45,
                         position: 'absolute',
                         right: 0,
-                        marginRight: 50,
+                        marginRight: 25,
                         marginTop: 25,
                         borderRadius: 45,
                         display: 'flex',
@@ -118,6 +122,7 @@ class App extends React.Component {
                     X
                 </div>
                 <About/>
+                <Panel point={this.state.actual_point}/>
                 <CardWrapper>
                     {this.state.points.map((point) => {
                         return <Card

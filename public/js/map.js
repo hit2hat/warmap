@@ -55,15 +55,17 @@ const helpers = {
         const mouse = new THREE.Vector2();
         const rect = renderer.domElement.getBoundingClientRect();
 
+        let mouseX = 0;
+        let mouseY = 0;
         if (event.type === 'touchstart')
         {
-            var mouseX = event.touches[0].clientX;
-            var mouseY = event.touches[0].clientY;
+            mouseX = event.touches[0].clientX;
+            mouseY = event.touches[0].clientY;
         }
         else
         {
-            var mouseX = event.clientX;
-            var mouseY = event.clientY;
+            mouseX = event.clientX;
+            mouseY = event.clientY;
         }
 
         mouse.x = ( ( mouseX - rect.left ) / ( rect.width - rect.left ) ) * 2 - 1;
@@ -100,7 +102,7 @@ const cameraControls = new CameraControls(camera, document.getElementById('root'
 const _dolly = cameraControls.dolly;
 cameraControls.dolly = (distance, enableTransition) => {
     let d = Math.abs(distance);
-    if (d < 18 || d > 60) return;
+    if (d < 18 || d > 55) return;
     _dolly.call(cameraControls, distance, enableTransition);
 };
 cameraControls.rotate(0, -1, true);
