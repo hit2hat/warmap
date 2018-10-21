@@ -15,7 +15,7 @@ script:
 - npm run build
 
 before_deploy:
-- zip dist.zip build/*
+- zip -r dist.zip build
 
 deploy:
   provider: releases
