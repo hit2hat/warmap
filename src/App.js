@@ -18,6 +18,7 @@ const Card = (props) => {
                 flexDirection: 'column'
             }}
             onClick={() => props.showInfo(props.id)}
+            onTouchStart={() => props.showInfo(props.id)}
         >
             <img
                 style={{marginTop: 25}}

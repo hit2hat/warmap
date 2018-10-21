@@ -55,8 +55,19 @@ const helpers = {
         const mouse = new THREE.Vector2();
         const rect = renderer.domElement.getBoundingClientRect();
 
-        mouse.x = ( ( event.clientX - rect.left ) / ( rect.width - rect.left ) ) * 2 - 1;
-        mouse.y = - ( ( event.clientY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
+        if (event.type === 'touchstart')
+        {
+            var mouseX = event.touches[0].clientX;
+            var mouseY = event.touches[0].clientY;
+        }
+        else
+        {
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+        }
+
+        mouse.x = ( ( mouseX - rect.left ) / ( rect.width - rect.left ) ) * 2 - 1;
+        mouse.y = - ( ( mouseY - rect.top ) / ( rect.bottom - rect.top) ) * 2 + 1;
 
         raycaster.setFromCamera( mouse, camera );
 
@@ -171,6 +182,7 @@ window.onresize = () => {
 // Listener of clicks
 // ========================
 document.getElementById('root').addEventListener('click', helpers.checkCursor);
+document.getElementById('root').addEventListener('touchstart', helpers.checkCursor);
 
 
 // ========================
