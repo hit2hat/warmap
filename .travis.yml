@@ -15,12 +15,10 @@ script:
   - npm run build
 
 before_deploy:
-  - zip ${TRAVIS_TAG}.zip build
+  - zip dist.zip build
 
 deploy:
   provider: releases
   api_key: "629ca4b3311aaf44ba0cfecfee3c40c91e782f67"
-  file: ${TRAVIS_TAG}.zip
+  file: dist.zip
   skip_cleanup: true
-  on:
-    tags: true
