@@ -1,5 +1,5 @@
 /*
-    Map Engine (needs THREE)
+    Map Engine (needs THREE.js)
     Author: @hit2hat (vk.me/hit2hat)
     Created at: 20.10.2018
  */
