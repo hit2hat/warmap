@@ -1,6 +1,5 @@
 import React from 'react';
 import Label from './label';
-import EventCard from './event-card';
 
 import '../styles/panel.css';
 
@@ -93,15 +92,10 @@ class InfoPanel extends React.Component {
                             >
                                 {this.props.point.losses} человек
                             </div>
-                            <h3>События</h3>
-                            {this.props.point.events.map((event, index) => {
-                                return (
-                                    <EventCard
-                                        key={index}
-                                        event={event}
-                                    />
-                                );
-                            })}
+                            <h3>Итоги</h3>
+                            <div style={{color: 'rgba(0, 0, 0, 0.7)'}}>
+                                {this.props.point.result}
+                            </div>
                         </div>
                     </div>
                 </div>
