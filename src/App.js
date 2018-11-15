@@ -1,12 +1,14 @@
 import React from 'react';
 import About from './components/about';
+import Panel from './components/panel';
 
 const Card = (props) => {
     return (
         <div
             style={{
-                height: 125,
+                height: props.general ? 150 : 125,
                 width: 200,
+                marginBottom: props.general ? 25: 0,
                 marginLeft: 25,
                 marginRight: 25,
                 borderRadius: 8,
@@ -23,11 +25,17 @@ const Card = (props) => {
             <img
                 style={{marginTop: 25}}
                 alt="123"
-                src="https://image.flaticon.com/icons/svg/1191/1191131.svg"
-                width="32"
-                height="32"
+                src={props.img}
+                width={props.general ? 32 : 20}
+                height={props.general ? 32 : 20}
             />
-            <h2 style={{marginTop: 5}}>{props.title}</h2>
+            {
+                props.general ?
+                    <h2 style={{marginTop: 5}}>{props.title}</h2>
+                    :
+                    <h3 style={{marginTop: 5, fontWeight: 300}}>{props.title}</h3>
+            }
+
         </div>
     );
 };
@@ -37,7 +45,7 @@ const CardWrapper = (props) => {
         <div style={{
             position: 'absolute',
             bottom: 0,
-            marginBottom: 25,
+            marginBottom: 0,
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
@@ -52,7 +60,8 @@ const CardWrapper = (props) => {
 class App extends React.Component {
 
     state = {
-        points: []
+        points: [],
+        actual_point: {}
     };
 
     closeBtn = React.createRef();
@@ -61,6 +70,7 @@ class App extends React.Component {
         this.closeBtn.current.style.opacity = 0;
         window.cameraControls.dollyTo(500, true);
         window.cameraControls.enabled = true;
+        this.setState({actual_point: {}});
     };
 
     show_info = (id) => {
@@ -69,6 +79,7 @@ class App extends React.Component {
                 window.helpers.rotateToPoint(point.lat, point.lon);
                 this.closeBtn.current.style.opacity = 1;
                 window.cameraControls.enabled = false;
+                this.setState({actual_point: point});
             }
             return true;
         });
@@ -104,7 +115,7 @@ class App extends React.Component {
                         height: 45,
                         position: 'absolute',
                         right: 0,
-                        marginRight: 50,
+                        marginRight: 25,
                         marginTop: 25,
                         borderRadius: 45,
                         display: 'flex',
@@ -118,17 +129,39 @@ class App extends React.Component {
                     X
                 </div>
                 <About/>
+                <Panel point={this.state.actual_point}/>
                 <CardWrapper>
-                    {this.state.points.map((point) => {
-                        return <Card
-                            key={point.id}
-                            id={point.id}
-                            title={point.title}
-                            lat={point.lat}
-                            lon={point.lon}
-                            showInfo={this.show_info.bind(this)}
-                        />
-                    })}
+                    <Card
+                        id={1}
+                        title=""
+                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        showInfo={this.show_info.bind(this)}
+                    />
+                    <Card
+                        id={1}
+                        title=""
+                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        showInfo={this.show_info.bind(this)}
+                    />
+                    <Card
+                        general
+                        id={1}
+                        title="Карта"
+                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        showInfo={this.show_info.bind(this)}
+                    />
+                    <Card
+                        id={1}
+                        title=""
+                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        showInfo={this.show_info.bind(this)}
+                    />
+                    <Card
+                        id={1}
+                        title="О стенде"
+                        img="https://image.flaticon.com/icons/svg/64/64494.svg"
+                        showInfo={this.show_info.bind(this)}
+                    />
                 </CardWrapper>
             </div>
         );

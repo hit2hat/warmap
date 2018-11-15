@@ -1,0 +1,11 @@
+.event-card {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.event-card > h4 {
+    margin: 0 0 10px 15px;
+    color: black !important;
+}
