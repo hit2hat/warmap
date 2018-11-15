@@ -9,13 +9,14 @@ class InfoPanel extends React.Component {
         if (!this.props.point.id) return (<div/>);
         return (
             <div>
-                <div className="panel" style={{left: 0, marginLeft: 25}}>
+                <div className="panel" style={{left: 0, marginLeft: 20}}>
                     <div className="content">
                         <div style={{display: 'flex'}}>
                             <div style={{width: '50%'}}>
                                 <img
                                     src={"/assets/packs/" + this.props.point.id + "/images/cover.jpg"}
                                     width="100%"
+                                    alt=""
                                 />
                             </div>
                             <div style={{display: 'flex', width: '50%', flexDirection: 'column'}}>
@@ -25,6 +26,7 @@ class InfoPanel extends React.Component {
                                             src={"/assets/packs/" + this.props.point.id + "/images/0.jpg"}
                                             width="100%"
                                             height="100%"
+                                            alt=""
                                         />
                                     </div>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
@@ -32,6 +34,7 @@ class InfoPanel extends React.Component {
                                             src={"/assets/packs/" + this.props.point.id + "/images/1.jpg"}
                                             width="100%"
                                             height="100%"
+                                            alt=""
                                         />
                                     </div>
                                 </div>
@@ -41,6 +44,7 @@ class InfoPanel extends React.Component {
                                             src={"/assets/packs/" + this.props.point.id + "/images/2.jpg"}
                                             width="100%"
                                             height="100%"
+                                            alt=""
                                         />
                                     </div>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
@@ -48,6 +52,7 @@ class InfoPanel extends React.Component {
                                             src={"/assets/packs/" + this.props.point.id + "/images/3.jpg"}
                                             width="100%"
                                             height="100%"
+                                            alt=""
                                         />
                                     </div>
                                 </div>
