@@ -1,16 +1,34 @@
 import React from 'react';
 import Label from './label';
 
+import 'viewerjs/dist/viewer.css';
 import '../styles/panel.css';
 
+import Viewer from 'viewerjs';
+import ReactDOM from 'react-dom';
+
+
 class InfoPanel extends React.Component {
+
+    connectViewer(node) {
+        if (node) {
+            new Viewer(ReactDOM.findDOMNode(node), {
+                toolbar: false,
+                navbar: false,
+                title: false,
+                movable: false,
+                button: false
+            });
+        }
+    }
+
     render() {
         if (!this.props.point.id) return (<div/>);
         return (
             <div>
                 <div className="panel" style={{left: 0, marginLeft: 20}}>
                     <div className="content">
-                        <div style={{display: 'flex'}}>
+                        <div ref={(node) => this.connectViewer(node)} style={{display: 'flex'}}>
                             <div style={{width: '50%'}}>
                                 <img
                                     src={"/assets/packs/" + this.props.point.id + "/cover.jpg"}
