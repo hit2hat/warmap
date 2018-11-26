@@ -1,9 +1,13 @@
 #about {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
 #about h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 #about h5 {
