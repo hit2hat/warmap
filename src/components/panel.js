@@ -31,7 +31,7 @@ class InfoPanel extends React.Component {
                         <div ref={(node) => this.connectViewer(node)} style={{display: 'flex'}}>
                             <div style={{width: '50%'}}>
                                 <img
-                                    src={"/assets/packs/" + this.props.point.id + "/cover.jpg"}
+                                    src={"assets/packs/" + this.props.point.id + "/cover.jpg"}
                                     width="100%"
                                     alt=""
                                 />
@@ -40,7 +40,7 @@ class InfoPanel extends React.Component {
                                 <div style={{display: 'flex'}}>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
                                         <img
-                                            src={"/assets/packs/" + this.props.point.id + "/0.jpg"}
+                                            src={"assets/packs/" + this.props.point.id + "/0.jpg"}
                                             width="100%"
                                             height="100%"
                                             alt=""
@@ -48,7 +48,7 @@ class InfoPanel extends React.Component {
                                     </div>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
                                         <img
-                                            src={"/assets/packs/" + this.props.point.id + "/1.jpg"}
+                                            src={"assets/packs/" + this.props.point.id + "/1.jpg"}
                                             width="100%"
                                             height="100%"
                                             alt=""
@@ -58,7 +58,7 @@ class InfoPanel extends React.Component {
                                 <div style={{display: 'flex'}}>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
                                         <img
-                                            src={"/assets/packs/" + this.props.point.id + "/2.jpg"}
+                                            src={"assets/packs/" + this.props.point.id + "/2.jpg"}
                                             width="100%"
                                             height="100%"
                                             alt=""
@@ -66,7 +66,7 @@ class InfoPanel extends React.Component {
                                     </div>
                                     <div style={{margin: 0, padding: 0, display: 'flex', width: '50%'}}>
                                         <img
-                                            src={"/assets/packs/" + this.props.point.id + "/3.jpg"}
+                                            src={"assets/packs/" + this.props.point.id + "/3.jpg"}
                                             width="100%"
                                             height="100%"
                                             alt=""
@@ -96,20 +96,6 @@ class InfoPanel extends React.Component {
                 <div className="panel">
                     <div className="content">
                         <div style={{marginTop: 15}}>
-                            <h3>Потери</h3>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    background: 'rgba(255, 0, 0, 0.8)',
-                                    color: 'white',
-                                    paddingTop: 15,
-                                    paddingBottom: 15
-                                }}
-                            >
-                                {this.props.point.losses} человек
-                            </div>
                             <h3>Итоги</h3>
                             <div style={{color: 'rgba(0, 0, 0, 0.7)'}}>
                                 {this.props.point.result}
