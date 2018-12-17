@@ -73,7 +73,6 @@ class App extends React.Component {
 
     onCloseBtn = () => {
         if (!Object.keys(this.state.actual_point).length) return;
-        console.log('wtf');
         if (this.state.illCode) return this.setState({ illCode: false});
         window.cameraControls.dollyTo(500, true);
         window.cameraControls.enabled = true;
@@ -138,17 +137,11 @@ class App extends React.Component {
                 </div>
                 <About/>
                 <Panel
-                    illCode={() => {
-                        this.setState({ illCode: true });
-                        console.log('panel');
-                    }}
+                    illCode={() => this.setState({ illCode: true })}
                     point={this.state.actual_point}
                 />
                 <CardWrapper
-                    illCode={() => {
-                        this.setState({ illCode: true });
-                        console.log('card wrapper');
-                    }}
+                    illCode={() => this.setState({ illCode: true })}
                 >
                     <Card
                         id={1}

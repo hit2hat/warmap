@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3232639f-304d-4664-b8b8-bf7c9f4cd87e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/about.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/war.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
@@ -22,11 +19,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="145" column="40" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
+            <state relative-caret-position="256">
+              <caret line="74" column="65" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="79" column="59" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -52,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/points.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="1657">
               <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
             </state>
           </provider>
@@ -61,29 +67,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/panel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+            <state relative-caret-position="342">
+              <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/label.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -156,16 +144,16 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/components/label.js" />
         <option value="$PROJECT_DIR$/src/styles/event-card.css" />
-        <option value="$PROJECT_DIR$/public/js/map.js" />
         <option value="$PROJECT_DIR$/src/components/event-card.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/styles/about.css" />
-        <option value="$PROJECT_DIR$/src/components/about.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/points.json" />
         <option value="$PROJECT_DIR$/src/styles/label.css" />
-        <option value="$PROJECT_DIR$/src/components/panel.js" />
         <option value="$PROJECT_DIR$/src/styles/panel.css" />
+        <option value="$PROJECT_DIR$/public/js/map.js" />
+        <option value="$PROJECT_DIR$/src/components/about.js" />
+        <option value="$PROJECT_DIR$/src/components/panel.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
@@ -206,6 +194,19 @@
               <item name="warmap" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="warmap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="warmap" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="warmap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="warmap" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="warmap" type="b2602c69:ProjectViewProjectNode" />
@@ -318,7 +319,7 @@
       <workItem from="1543340832099" duration="5000" />
       <workItem from="1543438539565" duration="43000" />
       <workItem from="1544996050914" duration="180000" />
-      <workItem from="1545043744376" duration="2418000" />
+      <workItem from="1545043744376" duration="4189000" />
     </task>
     <task id="LOCAL-00001" summary="Fix &lt;img&gt; tags">
       <created>1542271216234</created>
@@ -376,11 +377,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545045515092</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix #3: Add icons">
+      <created>1545046493886</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545046493887</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix #4: Add Ill Code">
+      <created>1545048011171</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545048011171</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49719000" />
+    <option name="totallyTimeSpent" value="51490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="796" extended-state="0" />
@@ -441,7 +456,9 @@
     <MESSAGE value="Release 1.0" />
     <MESSAGE value="Fix #1: Coordinates" />
     <MESSAGE value="Fix #2: Return cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix #2: Return cards" />
+    <MESSAGE value="Fix #3: Add icons" />
+    <MESSAGE value="Fix #4: Add Ill Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix #4: Add Ill Code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/manifest.json" />
@@ -457,13 +474,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml" />
-    <entry file="file://$PROJECT_DIR$/public/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="104" column="24" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/event-card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -525,16 +535,6 @@
     <entry file="file://$PROJECT_DIR$/public/assets/earth.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/about.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -566,17 +566,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/points.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/label.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/panel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/about.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/search.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/points.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1657">
+          <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -594,27 +607,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/panel.js">
+    <entry file="file://$PROJECT_DIR$/src/components/about.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+        <state relative-caret-position="45">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/panel.css">
+    <entry file="file://$PROJECT_DIR$/public/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="469">
+          <caret line="79" column="59" selection-start-line="79" selection-start-column="59" selection-end-line="79" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="145" column="40" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
+        <state relative-caret-position="256">
+          <caret line="74" column="65" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
