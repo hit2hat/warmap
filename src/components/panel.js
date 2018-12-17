@@ -74,7 +74,6 @@ class InfoPanel extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <h1 style={{marginTop: 5}}>{this.props.point.title}</h1>
                         <div style={{marginTop: 5}}>
@@ -88,7 +87,7 @@ class InfoPanel extends React.Component {
                             })}
                         </div>
 
-                        <h4 style={{fontSize: 14}}>
+                        <h4 style={{fontSize: 16}}>
                             {this.props.point.text}
                         </h4>
                     </div>
@@ -97,7 +96,7 @@ class InfoPanel extends React.Component {
                     <div className="content">
                         <div style={{marginTop: 15}}>
                             <h3>Итоги</h3>
-                            <div style={{color: 'rgba(0, 0, 0, 0.7)'}}>
+                            <div style={{color: 'rgba(0, 0, 0, 0.7)', fontSize: 16}}>
                                 {this.props.point.result}
                             </div>
                         </div>
