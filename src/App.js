@@ -8,7 +8,7 @@ const Card = (props) => {
         <div
             style={{
                 height: props.general ? 150 : 125,
-                width: 200,
+                width: props.general ? 350 : 200,
                 marginBottom: props.general ? 25: 0,
                 marginLeft: 25,
                 marginRight: 25,
@@ -135,33 +135,21 @@ class App extends React.Component {
                 <CardWrapper>
                     <Card
                         id={1}
-                        title=""
-                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
-                        showInfo={() => null}
-                    />
-                    <Card
-                        id={1}
-                        title=""
-                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        title="Поиск"
+                        img="/assets/search.svg"
                         showInfo={() => null}
                     />
                     <Card
                         general
                         id={1}
-                        title="Карта"
-                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
-                        showInfo={this.show_info.bind(this)}
-                    />
-                    <Card
-                        id={1}
-                        title=""
-                        img="https://image.flaticon.com/icons/svg/1191/1191131.svg"
+                        title="Выходцы из Рыбинска"
+                        img="/assets/war.svg"
                         showInfo={() => null}
                     />
                     <Card
                         id={1}
                         title="О стенде"
-                        img="https://image.flaticon.com/icons/svg/64/64494.svg"
+                        img="/assets/about.svg"
                         showInfo={() => null}
                     />
                 </CardWrapper>
