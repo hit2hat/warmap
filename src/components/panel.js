@@ -26,7 +26,7 @@ class InfoPanel extends React.Component {
         if (!this.props.point.id) return (<div/>);
         return (
             <div>
-                <div className="panel" style={{left: 0, marginLeft: 20}}>
+                <div className="panel" style={{left: 0, marginLeft: 20}} onClick={() => this.props.illCode()}>
                     <div className="content">
                         <div ref={(node) => this.connectViewer(node)} style={{display: 'flex'}}>
                             <div style={{width: '50%'}}>
@@ -92,7 +92,7 @@ class InfoPanel extends React.Component {
                         </h4>
                     </div>
                 </div>
-                <div className="panel">
+                <div className="panel" onClick={() => this.props.illCode()}>
                     <div className="content">
                         <div style={{marginTop: 15}}>
                             <h3>Итоги</h3>

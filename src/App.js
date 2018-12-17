@@ -52,7 +52,9 @@ const CardWrapper = (props) => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%'
-        }}>
+        }}
+            onClick={() => props.illCode()}
+        >
             {props.children}
         </div>
     );
@@ -63,16 +65,19 @@ class App extends React.Component {
 
     state = {
         points: [],
-        actual_point: {}
+        actual_point: {},
+        illCode: false
     };
 
     closeBtn = React.createRef();
 
     onCloseBtn = () => {
-        this.closeBtn.current.style.opacity = 0;
+        if (!Object.keys(this.state.actual_point).length) return;
+        console.log('wtf');
+        if (this.state.illCode) return this.setState({ illCode: false});
         window.cameraControls.dollyTo(500, true);
         window.cameraControls.enabled = true;
-        this.setState({actual_point: {}});
+        this.setState({actual_point: {}, illCode: false});
     };
 
     show_info = (id) => {
@@ -90,6 +95,7 @@ class App extends React.Component {
     componentWillMount = () => {
         window.react = {};
         window.react['show_info'] = this.show_info.bind(this);
+        window.react['close_panel'] = this.onCloseBtn.bind(this);
 
         fetch('points.json')
             .then((data) => data.json())
@@ -112,7 +118,7 @@ class App extends React.Component {
                 <div
                     ref={this.closeBtn}
                     style={{
-                        background: 'white',
+                        background: 'rgba(0, 0, 0, 0)',
                         width: 45,
                         height: 45,
                         position: 'absolute',
@@ -123,7 +129,7 @@ class App extends React.Component {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        color: 'black',
+                        color: 'rgba(0, 0, 0, 0)',
                         opacity: 0
                     }}
                     onClick={this.onCloseBtn}
@@ -131,8 +137,19 @@ class App extends React.Component {
                     X
                 </div>
                 <About/>
-                <Panel point={this.state.actual_point}/>
-                <CardWrapper>
+                <Panel
+                    illCode={() => {
+                        this.setState({ illCode: true });
+                        console.log('panel');
+                    }}
+                    point={this.state.actual_point}
+                />
+                <CardWrapper
+                    illCode={() => {
+                        this.setState({ illCode: true });
+                        console.log('card wrapper');
+                    }}
+                >
                     <Card
                         id={1}
                         title="Поиск"

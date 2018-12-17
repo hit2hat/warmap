@@ -76,6 +76,8 @@ const helpers = {
         const intersects = raycaster.intersectObjects(points);
         if (intersects.length > 0) {
             window.react.show_info(intersects[0].object.userData.id);
+        } else {
+            setTimeout(() => window.react.close_panel(), 25);
         }
     }
 };
