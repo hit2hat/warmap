@@ -146,20 +146,20 @@ class App extends React.Component {
                     <Card
                         id={1}
                         title="Поиск"
-                        img="/assets/search.svg"
+                        img="assets/search.svg"
                         showInfo={() => null}
                     />
                     <Card
                         general
                         id={1}
                         title="Выходцы из Рыбинска"
-                        img="/assets/war.svg"
+                        img="assets/war.svg"
                         showInfo={() => null}
                     />
                     <Card
                         id={1}
                         title="О стенде"
-                        img="/assets/about.svg"
+                        img="assets/about.svg"
                         showInfo={() => null}
                     />
                 </CardWrapper>
