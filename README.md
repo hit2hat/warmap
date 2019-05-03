@@ -1,5 +1,4 @@
-# WarMap [![Build Status](https://travis-ci.com/hit2hat/warmap.svg?token=7KowPMjePUYr8QgiGCH7&branch=master)](https://travis-ci.com/hit2hat/warmap)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhit2hat%2Fwarmap.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhit2hat%2Fwarmap?ref=badge_shield)
+# WarMap [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhit2hat%2Fwarmap.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhit2hat%2Fwarmap?ref=badge_shield)
 WarMap is a simple kiosk-like application for terminals, 
 that helps your customers with information about 
 a wars of the 20th century.
